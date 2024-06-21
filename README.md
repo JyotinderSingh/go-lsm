@@ -2,7 +2,7 @@
 
 ## Introduction
 
-goLSM is an LSM tree based storage engine written in Go. It offers a simple key-value interface and is designed to be used as an embedded storage engine. It is designed to offer high-write throughput with reasonable read performance.
+goLSM is an LSM tree based storage engine written in Go. It offers a simple key-value interface and is designed to be used as an embedded storage engine. It is designed to offer high-write throughput with reasonable read performance. 
 
 ## Features
 
@@ -21,7 +21,7 @@ First, you need to open an storage engine instance. You can do this using the `O
 ```go
 dir := "db_directory"
 // Open a new LSM tree instance with a 64MB in-memory component, and enable crash recovery.
-db, err := golsm.Open(dir, 64_000_000, true)
+db, err := golsm.Open(dir, 64 * 1024 * 1024, true) 
 ```
 
 ### Writing to the DB
